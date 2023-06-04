@@ -18,7 +18,7 @@ public class ViewStatsMapper {
                 .build();
     }
 
-    public static ViewStats ToViewStats(ViewStatsDto viewStatsDto) {
+    public static ViewStats toViewStats(ViewStatsDto viewStatsDto) {
         return ViewStats.builder()
                 .app(viewStatsDto.getApp())
                 .hits(viewStatsDto.getHits())
