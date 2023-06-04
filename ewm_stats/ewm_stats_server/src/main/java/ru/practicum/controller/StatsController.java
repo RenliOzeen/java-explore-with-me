@@ -26,9 +26,9 @@ public class StatsController {
     @GetMapping("/stats")
     public List<ViewStatsDto> findAll(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") LocalDateTime start,
                                       @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") LocalDateTime end,
-                                      @RequestParam(required = false) List<String> uriList,
+                                      @RequestParam(required = false) List<String> uris,
                                       @RequestParam(defaultValue = "false") Boolean unique) {
         log.info("Получен запрос на выгрузку статистики");
-        return statsService.findAll(start, end, uriList, unique);
+        return statsService.findAll(start, end, uris, unique);
     }
 }
